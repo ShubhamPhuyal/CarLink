@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa"; // For mobile menu
+import Link from "next/link"; // Use Next.js Link if using Next.js
 
 const Background = styled.div`
   background-color: #fbfbff;
@@ -28,6 +29,10 @@ const NavWrapper = styled.div`
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+  
+  img {
+    cursor: pointer; /* Ensure it's clear the logo is clickable */
+  }
 `;
 
 const NavLinks = styled.div`
@@ -100,15 +105,17 @@ export default function Header() {
       <StyledNav>
         <Container>
           <NavWrapper>
-            {/* Logo */}
+            {/* Logo with link */}
             <LogoContainer>
-              <img src="/carlink.png" alt="CarLink Logo" />
+              <Link href="/" passHref>
+                <img src="/carlink.png" alt="CarLink Logo" />
+              </Link>
             </LogoContainer>
 
             {/* Navigation Links */}
             <NavLinks isOpen={menuOpen}>
-              <NavLink href="/new-car">Book Cars</NavLink>
-              <NavLink href="/rent-car">Car Parts</NavLink>
+              <NavLink href="/products">Book Cars</NavLink>
+              <NavLink href="/parts">Car Parts</NavLink>
               <NavLink href="/car-parts">Rent Cars</NavLink>
               <NavLink href="/car-review">News</NavLink>
               <NavLink href="/compare-car">Compare Car</NavLink>

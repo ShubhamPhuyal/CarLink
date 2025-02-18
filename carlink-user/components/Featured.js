@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Center from "./Center"; // Importing the reusable Center component
-import PrimaryBtn, { ButtonStyle } from "./Button";
+import Button from "@/components/Button";
 import { Product } from "@/models/Product";
 import ButtonLink from "./ButtonLink";
 
@@ -132,7 +132,7 @@ export default function Featured({product}) {
             </Description>
 
             {/* Search Section */}
-            <ButtonLink href={'/products/'+product._id}>Explore Cars</ButtonLink> {/* Blue button */}
+            <Button href={'/products/'+product._id}>Explore Cars</Button> {/* Blue button */}
           </LeftContent>
 
           {/* Right Image */}
