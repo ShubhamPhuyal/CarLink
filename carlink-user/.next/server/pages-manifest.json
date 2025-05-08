@@ -1,0 +1,13 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/api/stats": "pages/api/stats.js",
+  "/api/chat/unreadCount": "pages/api/chat/unreadCount.js",
+  "/api/socket": "pages/api/socket.js",
+  "/cart": "pages/cart.js",
+  "/profile": "pages/profile.js",
+  "/": "pages/index.js",
+  "/api/chat/getMessage": "pages/api/chat/getMessage.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
+}
